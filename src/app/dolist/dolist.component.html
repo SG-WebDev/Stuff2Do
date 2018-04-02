@@ -1,0 +1,14 @@
+<div class="list">
+  <h4 class="text-center">You must to do it!</h4>
+  <ng-container *ngIf="list.length > 0; else noTask">
+    <p class="alert alert-warning" [ngClass]="{'alert-success':list.length <4, 'alert-warning':list.length >3 } ">Stuff to do: {{list.length}}</p>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let task of list;">
+        <a class="mr-4">{{task}}</a>
+        <button class="btn btn-success btn-sm float-right" (click)="done(task)">Done</button>
+        <button class="btn btn-danger btn-sm float-right" (click)="remove(task)">Delete</button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #noTask><div class="alert alert-success">Nothing to do</div></ng-template>
+</div>
