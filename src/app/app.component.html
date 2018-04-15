@@ -1,10 +1,8 @@
-    <div style="text-align:center">
-      <h1 class="display-1  py-3 mb-5">Stuff2Do</h1>
-      <app-adder (emitTask)="add($event)"></app-adder>
-    </div>
-    <div class="content">
-      <app-dolist class="col-md-4 mx-auto" [list]="list" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-dolist>
-      <app-donelist class="col-md-4 mx-auto" [doneList]="doneList"></app-donelist>
-    </div>
+<app-adder (emitTask)="add($event)"></app-adder>
+<div class="content">
+  <app-dolist class="col-md-4 mx-auto" [list]="list" (emitDone)="done($event)"
+              (emitRemove)="remove($event)"></app-dolist>
+  <app-donelist class="col-md-4 mx-auto" [doneList]="doneList"></app-donelist>
+</div>
 
 
