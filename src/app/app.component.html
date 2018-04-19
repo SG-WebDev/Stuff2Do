@@ -1,3 +1,13 @@
+<div class="jumbotron text-center stylish-color white-text">
+  <h1 class="card-title mt-2 font-bold display-4"><strong>Stuff2Do</strong></h1>
+  <p class="mt-4"><strong>To Do Online App</strong></p>
+  <hr class="my-4 rgba-white-light">
+  <div class="d-flex justify-content-center">
+    <p class="my-2" style="max-width: 43rem;">This is another To Do app. Just write what you have to do and I will help
+      you to remember this.
+    </p>
+  </div>
+</div>
 <app-adder (emitTask)="add($event)"></app-adder>
 <div class="content">
   <app-dolist class="col-md-4 mx-auto" [list]="list" (emitDone)="done($event)"
