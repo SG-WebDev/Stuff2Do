@@ -8,9 +8,7 @@ import {Component, Input} from '@angular/core';
 export class DonelistComponent {
   @Input()
   doneList: Array<string> = [];
-
   reset() {
-    localStorage.setItem('DoneList', '[]');
-    this.doneList = [];
+    this.doneList.length = 0;
   }
 }
