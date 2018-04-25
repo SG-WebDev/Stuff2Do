@@ -6,6 +6,11 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./donelist.component.css']
 })
 export class DonelistComponent {
-@Input()
-doneList: Array<string> = [];
+  @Input()
+  doneList: Array<string> = [];
+
+  reset() {
+    localStorage.setItem('DoneList', '[]');
+    this.doneList = [];
+  }
 }
