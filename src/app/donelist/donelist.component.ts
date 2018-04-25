@@ -10,5 +10,6 @@ export class DonelistComponent {
   doneList: Array<string> = [];
   reset() {
     this.doneList.length = 0;
+    localStorage.setItem('DoneList', '[]');
   }
 }
