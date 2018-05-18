@@ -4,9 +4,19 @@
     <p class="alert alert-warning" [ngClass]="{'alert-success':list.length <4, 'alert-warning':list.length >3 } ">Stuff to do: {{list.length}}</p>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let task of list;">
-        <a class="mr-4">{{task}}</a>
-        <button class="btn btn-success btn-sm float-right" (click)="done(task)">Done</button>
-        <button class="btn btn-danger btn-sm float-right" (click)="remove(task)">Delete</button>
+        <div class="row">
+          <div class="col-md-12">
+            <a class="flex-center">{{task}}</a>
+          </div>
+        </div>
+        <div class="row pt-3 pb-2">
+          <div class="col-lg-6">
+            <button class="btn btn-success btn-sm btn-block" (click)="done(task)">Done</button>
+          </div>
+          <div class="col-lg-6">
+            <button class="btn btn-danger btn-sm btn-block" (click)="remove(task)">Delete</button>
+          </div>
+        </div>
       </li>
     </ul>
   </ng-container>
